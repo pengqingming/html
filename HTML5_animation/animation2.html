@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画序列</title>
+	<style type="text/css">
+		.icon{
+			display: inline-block;
+			margin-right: 20px;
+			animation:move 1s;
+			animation-fill-mode: both;
+		}
+
+		.home::before{
+			content:"\e62e";
+		}
+		.search::before{
+			content:"\e352";
+		}
+		.user::before{
+			content:"\e653";
+		}
+		.mail::before{
+			content:"\e637";
+		}
+		.chat::before{
+			content:"\e32e";
+		}
+		@keyframes move{
+			from{
+				opacity: 0;
+				transform: translateY(100%);
+			}
+			to{
+				opacity: 1;
+				transform: translateY(0%);
+			}
+		}
+		.home{
+			animation-delay: 0.1s;
+		}
+		.search{
+			animation-delay: 0.2s;
+		}
+		.user{
+			animation-delay: 0.4s;
+		}
+		.mail{
+			animation-delay: 0.6s;
+		}
+		.chat{
+			animation-delay: 0.8s;
+		}
+	</style>
+</head>
+<body>
+	<span class="icon home">Home</span>
+	<span class="icon search">Search</span>
+	<span class="icon user">User</span>
+	<span class="icon mail">Mail</span>
+	<span class="icon chat">Chat</span>
+</body>
+</html>
