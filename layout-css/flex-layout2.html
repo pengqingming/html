@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex布局2</title>
+	<style>
+		.wrapper{
+			display: flex;
+			flex-flow: row wrap;
+			text-align: center;
+			font-weight: bold;
+		}
+		.wrapper >*{
+			padding: 10px;
+			flex: 1 100%;
+		}
+		.header{
+			background: #638;
+		}
+		.footer{
+			background: #78ae9c;
+			order: 4;
+		}
+		.main{
+			text-align: left;
+			background: #a4981c;
+			flex:2 0px; 
+			order: 2;
+		}
+		.aside-1{
+			background: #6ac920;
+			order: 1;
+		}
+		.aside-2{
+			background: #87c81c;
+			order: 3;
+		}
+		.aside{
+			flex: 1 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">Header</header>
+		<article class="main">
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+		</article>
+		<aside class="aside aside-1">Aside 1</aside>
+		<aside class="aside aside-2">Aside 2</aside>
+		<footer class="footer">Footer</footer>
+	</div>
+</body>
+</html>
